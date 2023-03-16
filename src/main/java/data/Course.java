@@ -27,7 +27,40 @@ public class Course {
     @Override
     public String toString() {
 
-         String stringData = String.format("""
+        ArrayList<String> groupsNumbers = new ArrayList<>();
+        ArrayList<String> degreesNames = new ArrayList<>();
+
+        ArrayList<Group> tmpGroups = this.getGroups();
+        ArrayList<Degree> tmpDegrees = this.getDegrees();
+
+        // get groups data to String
+        if (tmpGroups == null){
+            groupsNumbers.add("UNDEFINED");
+        }
+        else {
+            for (Group actualGroup : tmpGroups) {
+                groupsNumbers.add(Integer.toString(
+                        actualGroup.getNumber()));
+            }
+        }
+
+        // get final groups
+        String groups = String.join(",",groupsNumbers);
+
+        // Get Degrees data to String
+        if (tmpDegrees == null){
+            degreesNames.add("UNDEFINED");
+        }
+        else {
+            for (Degree actualDegree : tmpDegrees) {
+                degreesNames.add(actualDegree.getName());
+            }
+        }
+        // get final degrees names
+        String degrees = String.join(",",degreesNames);
+
+
+        return String.format("""
                         Course Info
         
                         ID: %d
@@ -35,9 +68,7 @@ public class Course {
                         Groups: %s
                         Degree: %s
                         
-                        """, getNumber(), getName(), getGroups(), getDegrees());
-
-        return stringData;
+                        """, getNumber(), getName(), groups, degrees);
     }
 
     // endregion
