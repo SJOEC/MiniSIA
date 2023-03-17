@@ -4,8 +4,7 @@ public class Person {
 
     private Long id;
     private String user;
-    private String firstName;
-    private String lastName;
+    private String name;
 
     // region Constructors
 
@@ -19,11 +18,8 @@ public class Person {
     public String getUser(){ return this.user; }
     public void setUser(String user){ this.user = user; }
 
-    public String getFirstName(){ return this.firstName; }
-    public void setFirstName(String firstName){ this.firstName = firstName; }
-
-    public String getLastName(){ return this.lastName; }
-    public void setLastName(String lastName){ this.lastName = lastName; }
+    public String getName(){ return this.name; }
+    public void setName(String firstName){ this.name = firstName; }
     // endregion
 
 }

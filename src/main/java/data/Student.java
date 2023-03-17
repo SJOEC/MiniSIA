@@ -15,21 +15,19 @@ public class Student extends Person {
     public Student(){
         this.setId((long) -1);
         this.setUser("UNDEFINED");
-        this.setFirstName("UNDEFINED");
-        this.setLastName("UNDEFINED");
+        this.setName("UNDEFINED");
         this.setSchedule(null);
         this.setGrades(null);
         this.setGroups(null);
         this.setDegrees(null);
     }
 
-    public Student(long id, String user, String firstName, String lastName,
+    public Student(long id, String user, String name,
                    Schedule s, ArrayList<Grade> grades, ArrayList<Group> groups, ArrayList<Degree> degrees) {
 
         this.setId(id);
         this.setUser(user);
-        this.setFirstName(firstName);
-        this.setLastName(lastName);
+        this.setName(name);
         this.setSchedule(s);
         this.setGrades(grades);
         this.setGroups(groups);
@@ -49,7 +47,7 @@ public class Student extends Person {
                             Grades: %s
                             Degrees: %s
                             
-                            """, getId(), getFirstName(), getLastName(), getGrades(), getDegrees());
+                            """, getId(), getName(), getGrades(), getDegrees());
 
         return stringData;
     }

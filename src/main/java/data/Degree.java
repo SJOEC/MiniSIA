@@ -23,9 +23,31 @@ public class Degree {
     }
     // endregion
 
-    // region other methdos
+    // region other methods
+
     @Override
     public String toString(){
+
+        ArrayList<String> coursesName = new ArrayList<>();
+        ArrayList<String> studentsNames = new ArrayList<>();
+
+        ArrayList<Course> tmpCourses = this.getCourses();
+        ArrayList<Student> tmpStudents = this.getStudents();
+
+
+        for (Course actualCourse : tmpCourses){
+            coursesName.add(actualCourse.getName());
+        }
+        // get final courses
+        String courses = String.join(",", coursesName);
+
+
+        for (Student actualStudent : tmpStudents){
+            studentsNames.add(actualStudent.getName());
+        }
+        // get final students names
+        String students = String.join(",", studentsNames);
+
         return String.format("""
                 Degree Info:
 
@@ -34,7 +56,7 @@ public class Degree {
                 Courses: %s
                 Students: %s
                 
-                """, getId(),getName(), getCourses(), getStudents());
+                """, getId(), students, courses, getStudents());
     }
     // endregion
 

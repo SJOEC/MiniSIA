@@ -9,21 +9,20 @@ public class Professor extends Person {
     ArrayList<Group> groups;
 
     // region Constructors
-        public Professor(){
+
+    public Professor(){
         this.setId((long) -1);
         this.setUser("UNDEFINED");
-        this.setFirstName("UNDEFINED");
-        this.setLastName("UNDEFINED");
+        this.setName("UNDEFINED");
         this.setGroups(null);
     }
-    public Professor(long id, String user, String firstName, String lastName, ArrayList<Group> groups) {
+
+    public Professor(long id, String user, String name, ArrayList<Group> groups) {
         this.setId(id);
         this.setUser(user);
-        this.setFirstName(firstName);
-        this.setLastName(lastName);
+        this.setName(name);
         this.setGroups(groups);
     }
-
     // endregion
 
     // region other methods
@@ -33,10 +32,10 @@ public class Professor extends Person {
                 Professor Info
 
                 ID: %d
-                Name: %s %s
+                Name: %s
                 Groups: %s
                 
-                """, getId(), getFirstName(), getLastName(), getGroups());
+                """, getId(), getName(), getGroups());
     }
     // endregion
 

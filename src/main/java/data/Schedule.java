@@ -1,5 +1,7 @@
 package data;
 
+import java.util.Arrays;
+
 public class Schedule {
     private String[] courses;
     private String[] daysOfWeek;
@@ -35,7 +37,8 @@ public class Schedule {
                 Times of day: %s
                 Student: %s
                 
-                """, getCourses(), getDaysOfWeek(), getTimesOfDay(), getStudent());
+                """, Arrays.toString(getCourses()), Arrays.toString(getDaysOfWeek()),
+                Arrays.toString(getTimesOfDay()), getStudent());
     }
 
     // endregion

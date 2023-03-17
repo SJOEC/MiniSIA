@@ -8,9 +8,11 @@ public class Grade {
     public Grade(){
         this.setGrade(-1);
     }
+
     public Grade(int grade){
         this.setGrade(grade);
     }
+
     // endregion
 
     // region other methods

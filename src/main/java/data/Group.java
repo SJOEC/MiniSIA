@@ -1,6 +1,7 @@
 package data;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Group {
     private int number;
@@ -23,18 +24,31 @@ public class Group {
     public Group(int number,String[] daysOfWeek, String[] timesOfDay, String semester, Course course,
                  ArrayList<Student> students, Professor professor){
         this.setNumber(number);
-        this.setDaysOfWeek(timesOfDay);
+        this.setDaysOfWeek(daysOfWeek);
+        this.setTimesOfDay(timesOfDay);
         this.setSemester(semester);
         this.setCourse(course);
         this.setStudents(students);
+        this.setProfessor(professor);
     }
-
 
     // endregion
 
     // region other methods
     @Override
     public String toString(){
+
+        ArrayList<String> studentsNames = new ArrayList<>();
+
+        ArrayList<Student> tmpStudents = this.getStudents();
+
+        for (Student actualStudent : tmpStudents){
+            studentsNames.add(actualStudent.getName());
+        }
+
+        // get final students names
+        String students = String.join(",", studentsNames);
+
         return String.format("""
                 Group Info
 
@@ -46,8 +60,8 @@ public class Group {
                 Students: %s
                 Professor: %s
                 
-                """, getNumber(), getDaysOfWeek(), getTimesOfDay(), getSemester(),
-                getCourse(), getStudents(), getProfessor());
+                """, getNumber(), Arrays.toString(getDaysOfWeek()), Arrays.toString(getTimesOfDay()), getSemester(),
+                getCourse(), students, getProfessor().getName());
     }
     // endregion
 
