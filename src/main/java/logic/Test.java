@@ -49,8 +49,26 @@ public class Test {
         // endregion
 
         // region courses data
-            //TODO create courses
+
+            // region computer science data
+            ArrayList<Course> csCourses = new ArrayList<>();
+            ArrayList<Student> csStudents = new ArrayList<>();
+
+            Degree computerScience = new Degree(106341, "Ciencias de la computacion",
+                    csCourses, csStudents);
+            // endregion
+
+                // region economy data
+                    ArrayList<Course> ecCourses = new ArrayList<>();
+                    ArrayList<Student> ecStudents = new ArrayList<>();
+
+                    Degree economy = new Degree(18, "Economia",
+                            ecCourses, ecStudents);
+                // endregion
+
         // endregion
+
+
 
         int option;
 
