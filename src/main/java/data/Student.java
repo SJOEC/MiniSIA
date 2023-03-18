@@ -23,7 +23,8 @@ public class Student extends Person {
     }
 
     public Student(long id, String user, String name,
-                   Schedule s, ArrayList<Grade> grades, ArrayList<Group> groups, ArrayList<Degree> degrees) {
+                   Schedule s, ArrayList<Grade> grades,
+                   ArrayList<Group> groups, ArrayList<Degree> degrees) {
 
         this.setId(id);
         this.setUser(user);
@@ -40,13 +41,12 @@ public class Student extends Person {
     @Override
     public String toString(){
          String stringData = String.format("""
-                            Student Info
-            
+                            --------------------
                             ID: %d
-                            Name: %s %s
+                            Name: %s
                             Grades: %s
                             Degrees: %s
-                            
+                            --------------------
                             """, getId(), getName(), getGrades(), getDegrees());
 
         return stringData;

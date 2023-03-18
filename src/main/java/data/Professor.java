@@ -29,12 +29,11 @@ public class Professor extends Person {
     @Override
     public String toString(){
         return String.format("""
-                Professor Info
-
+                --------------------
                 ID: %d
                 Name: %s
                 Groups: %s
-                
+                --------------------
                 """, getId(), getName(), getGroups());
     }
     // endregion
