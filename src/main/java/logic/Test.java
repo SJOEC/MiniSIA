@@ -51,23 +51,22 @@ public class Test {
         // region courses data
 
             // region computer science data
-            ArrayList<Course> csCourses = new ArrayList<>();
-            ArrayList<Student> csStudents = new ArrayList<>();
+                ArrayList<Course> csCourses = new ArrayList<>();
+                ArrayList<Student> csStudents = new ArrayList<>();
 
-            Degree computerScience = new Degree(106341, "Ciencias de la computacion",
-                    csCourses, csStudents);
+                Degree computerScience = new Degree(106341, "Ciencias de la computacion",
+                        csCourses, csStudents);
             // endregion
 
-                // region economy data
+            // region economy data
                     ArrayList<Course> ecCourses = new ArrayList<>();
                     ArrayList<Student> ecStudents = new ArrayList<>();
 
                     Degree economy = new Degree(18, "Economia",
                             ecCourses, ecStudents);
-                // endregion
+            // endregion
 
         // endregion
-
 
 
         int option;
@@ -90,8 +89,16 @@ public class Test {
                 UI.printMenu();
 
             } else if (option == 3) {
-                System.out.println();
-                // TODO print courses names
+                ArrayList<String> degrees = new ArrayList<>();
+                degrees.add(computerScience.getName());
+                degrees.add(economy.getName());
+
+                for (String actualdegree : degrees ){
+
+                    System.out.println("- " + actualdegree);
+                }
+
+                UI.printMenu();
 
             } else if (option == 4) {
                 UI.printExit();
