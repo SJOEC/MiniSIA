@@ -50,38 +50,18 @@ public class Test {
         // region degrees data
 
         // computer science data
-            ArrayList<Course> csCourses = new ArrayList<>();
-            ArrayList<Student> csStudents = new ArrayList<>();
+        ArrayList<Course> csCourses = new ArrayList<>();
+        ArrayList<Student> csStudents = new ArrayList<>();
 
-            Degree computerScience = new Degree(106341, "Ciencias de la computacion",
-                    csCourses, csStudents);
+        Degree computerScience = new Degree(106341, "Ciencias de la computacion",
+                csCourses, csStudents);
 
         // economy data
-                ArrayList<Course> ecCourses = new ArrayList<>();
-                ArrayList<Student> ecStudents = new ArrayList<>();
+        ArrayList<Course> ecCourses = new ArrayList<>();
+        ArrayList<Student> ecStudents = new ArrayList<>();
 
-                Degree economy = new Degree(18, "Economia",
-                        ecCourses, ecStudents);
-
-        // endregion
-
-        // region Courses data
-
-        // POO course data
-
-        ArrayList<Group> pooGroups = new ArrayList<>();
-        ArrayList<Degree> pooDegrees = new ArrayList<>();
-
-        Course poo = new Course(101, "Programación orientada a objetos",
-                pooGroups, pooDegrees);
-
-        // Math course data
-
-        ArrayList<Group> mathGroups = new ArrayList<>();
-        ArrayList<Degree> mathDegrees = new ArrayList<>();
-
-        Course math = new Course(101, "Programación orientada a objetos",
-                mathGroups, mathDegrees);
+        Degree economy = new Degree(18, "Economia",
+                ecCourses, ecStudents);
 
         // endregion
 
@@ -95,7 +75,7 @@ public class Test {
         ArrayList<Student> poo1Students = new ArrayList<>();
 
         Group poo1 = new Group(1, DAYSPOO1, TODPOO1,
-                "1", poo, poo1Students, edimber);
+                "1", null, poo1Students, edimber);
 
         // math group data
 
@@ -105,9 +85,36 @@ public class Test {
         ArrayList<Student> math1Students = new ArrayList<>();
 
         Group math1 = new Group(1, DAYSMATH1, TODMATH1,
-                "1", math, math1Students, francisco);
+                "1", null, math1Students, francisco);
 
         // endregion
+
+        // region Courses data
+
+        // POO course data
+
+        ArrayList<Group> pooGroups = new ArrayList<>();
+        pooGroups.add(poo1);
+
+        ArrayList<Degree> pooDegrees = new ArrayList<>();
+
+        Course poo = new Course(101, "Programación orientada a objetos",
+                pooGroups, pooDegrees);
+
+        // Math course data
+
+        ArrayList<Group> mathGroups = new ArrayList<>();
+        mathGroups.add(math1);
+
+        ArrayList<Degree> mathDegrees = new ArrayList<>();
+
+        Course math = new Course(201, "Fundamentos de matematicas",
+                mathGroups, mathDegrees);
+
+        // endregion
+
+        math1.setCourse(math);
+        poo1.setCourse(poo);
 
 
         int option;
