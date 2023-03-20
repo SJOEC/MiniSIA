@@ -40,6 +40,11 @@ public class Student extends Person {
 
     @Override
     public String toString(){
+         ArrayList<Degree> degrees = getDegrees();
+         ArrayList<String> degreesNames = new ArrayList<>();
+         for (Degree actualDegree: degrees){
+             degreesNames.add(actualDegree.getName());
+         }
          String stringData = String.format("""
                             --------------------
                             ID: %d
@@ -47,7 +52,7 @@ public class Student extends Person {
                             Grades: %s
                             Degrees: %s
                             --------------------
-                            """, getId(), getName(), getGrades(), getDegrees());
+                            """, getId(), getName(), getGrades(), degreesNames);
 
         return stringData;
     }

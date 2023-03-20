@@ -28,13 +28,18 @@ public class Professor extends Person {
     // region other methods
     @Override
     public String toString(){
+        ArrayList<Group> groups = getGroups();
+        ArrayList<String> groupsId = new ArrayList<>();
+        for (Group actualGroup : groups){
+            groupsId.add(String.valueOf(actualGroup.getNumber()));
+        }
         return String.format("""
                 --------------------
                 ID: %d
                 Name: %s
                 Groups: %s
                 --------------------
-                """, getId(), getName(), getGroups());
+                """, getId(), getName(), groupsId);
     }
     // endregion
 

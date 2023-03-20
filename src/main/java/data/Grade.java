@@ -9,7 +9,7 @@ public class Grade {
         this.setGrade(-1);
     }
 
-    public Grade(int grade){
+    public Grade(double grade){
         this.setGrade(grade);
     }
 
@@ -18,12 +18,7 @@ public class Grade {
     // region other methods
     @Override
     public String toString(){
-        return String.format("""
-                Grade Info
-                
-                Grade: %f
-                
-                """, getGrade());
+        return String.format(" %.2f ", getGrade());
     }
     // endregion
 
