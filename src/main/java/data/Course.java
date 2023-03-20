@@ -61,13 +61,13 @@ public class Course {
 
 
         return String.format("""
+                        \n
                         Course Info
         
                         ID: %d
                         Name: %s
                         Groups: %s
                         Degree: %s
-                        
                         """, getNumber(), getName(), groups, degrees);
     }
 

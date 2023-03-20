@@ -35,7 +35,8 @@ public class UI {
     }
 
     public static void printMenu(){System.out.println("Marque:\n1 para ver los estudiantes\n" +
-            "2 para ver los profesores\n3 para ver la oferta academica\n4 para salir");
+            "2 para ver los profesores\n3 para ver la oferta academica\n4 para ver los cursos disponibles" +
+            "\n5 para salir");
     };
 
     public static int select() {

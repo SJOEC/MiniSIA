@@ -59,9 +59,9 @@ public class Group {
                 Course: %s
                 Students: %s
                 Professor: %s
-                
+                --------------------
                 """, getNumber(), Arrays.toString(getDaysOfWeek()), Arrays.toString(getTimesOfDay()), getSemester(),
-                getCourse(), students, getProfessor().getName());
+                getCourse().getName(), students, getProfessor().getName());
     }
     // endregion
 
