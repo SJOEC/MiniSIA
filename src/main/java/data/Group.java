@@ -2,6 +2,7 @@ package data;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Group {
     private int number;
@@ -9,7 +10,7 @@ public class Group {
     private String[] timesOfDay;
     private String semester;
     private Course course;
-    private ArrayList<Student> students;
+    private List<Student> students = new ArrayList<>();
     Professor professor;
 
     // region Constructors
@@ -38,9 +39,9 @@ public class Group {
     @Override
     public String toString(){
 
-        ArrayList<String> studentsNames = new ArrayList<>();
+        List<String> studentsNames = new ArrayList<>();
 
-        ArrayList<Student> tmpStudents = this.getStudents();
+        List<Student> tmpStudents = this.getStudents();
 
         for (Student actualStudent : tmpStudents){
             studentsNames.add(actualStudent.getName());
@@ -81,7 +82,7 @@ public class Group {
     public Course getCourse(){ return this.course; }
     public void setCourse(Course course){ this.course = course; }
 
-    public ArrayList<Student> getStudents(){ return this.students; }
+    public List<Student> getStudents(){ return this.students; }
     public void setStudents(ArrayList<Student> students){ this.students = students; }
 
     public Professor getProfessor(){ return this.professor; }

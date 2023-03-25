@@ -1,12 +1,13 @@
 package data;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Course {
     private int number;
     private String name;
-    private ArrayList<Group> groups;
-    private ArrayList<Degree> degrees;
+    private List<Group> groups = new ArrayList<>();
+    private List<Degree> degrees = new ArrayList<>();
 
     // region Constructors
     public Course() {
@@ -30,8 +31,8 @@ public class Course {
         ArrayList<String> groupsNumbers = new ArrayList<>();
         ArrayList<String> degreesNames = new ArrayList<>();
 
-        ArrayList<Group> tmpGroups = this.getGroups();
-        ArrayList<Degree> tmpDegrees = this.getDegrees();
+        List<Group> tmpGroups = this.getGroups();
+        List<Degree> tmpDegrees = this.getDegrees();
 
         // get groups data to String
         if (tmpGroups == null){
@@ -81,10 +82,10 @@ public class Course {
     public String getName(){ return this.name; }
     public void setName(String name){ this.name = name; }
 
-    public ArrayList<Group> getGroups(){ return this.groups; }
+    public List<Group> getGroups(){ return this.groups; }
     public void setGroups(ArrayList<Group> groups){ this.groups = groups; }
 
-    public ArrayList<Degree> getDegrees(){ return this.degrees; }
+    public List<Degree> getDegrees(){ return this.degrees; }
     public void setDegrees(ArrayList<Degree> degrees){ this.degrees = degrees; }
     // endregion
 }

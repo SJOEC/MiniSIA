@@ -3,13 +3,14 @@ package data;
 import data.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Student extends Person {
 
     private Schedule schedule;
-    private ArrayList<Grade> grades;
-    private ArrayList<Group> groups;
-    private ArrayList<Degree> degrees;
+    private List<Grade> grades = new ArrayList<>();
+    private List<Group> groups = new ArrayList<>();
+    private List<Degree> degrees = new ArrayList<>();
 
     // region Constructors
     public Student(){
@@ -40,7 +41,7 @@ public class Student extends Person {
 
     @Override
     public String toString(){
-         ArrayList<Degree> degrees = getDegrees();
+         List<Degree> degrees = getDegrees();
          ArrayList<String> degreesNames = new ArrayList<>();
          for (Degree actualDegree: degrees){
              degreesNames.add(actualDegree.getName());
@@ -63,13 +64,13 @@ public class Student extends Person {
     public Schedule getSchedule() { return this.schedule; }
     public void setSchedule(Schedule schedule) { this.schedule = schedule; }
 
-    public ArrayList<Grade> getGrades(){ return this.grades; }
-    public void setGrades(ArrayList<Grade> grades){ this.grades = grades; }
+    public List<Grade> getGrades(){ return this.grades; }
+    public void setGrades(List<Grade> grades){ this.grades = grades; }
 
-    public ArrayList<Group> setGroups(){ return this.groups; }
-    public void setGroups(ArrayList<Group> groups){ this.groups = groups; }
+    public List<Group> setGroups(){ return this.groups; }
+    public void setGroups(List<Group> groups){ this.groups = groups; }
 
-    public ArrayList<Degree> getDegrees(){ return this.degrees; }
+    public List<Degree> getDegrees(){ return this.degrees; }
     public void setDegrees(ArrayList<Degree> degrees){ this.degrees = degrees;}
     // endregion
 

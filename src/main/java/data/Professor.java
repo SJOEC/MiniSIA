@@ -4,9 +4,10 @@ import data.Group;
 import data.Person;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Professor extends Person {
-    ArrayList<Group> groups;
+    List<Group> groups = new ArrayList<>();
 
     // region Constructors
 
@@ -28,7 +29,7 @@ public class Professor extends Person {
     // region other methods
     @Override
     public String toString(){
-        ArrayList<Group> groups = getGroups();
+        List<Group> groups = getGroups();
         ArrayList<String> groupsId = new ArrayList<>();
         for (Group actualGroup : groups){
             groupsId.add(String.valueOf(actualGroup.getNumber()));
@@ -44,8 +45,8 @@ public class Professor extends Person {
     // endregion
 
     // region Getters and Setters
-    public ArrayList<Group> getGroups(){ return this.groups; }
-    public void setGroups(ArrayList<Group> groups){ this.groups = groups; }
+    public List<Group> getGroups(){ return this.groups; }
+    public void setGroups(List<Group> groups){ this.groups = groups; }
     // endregion
 }
 
